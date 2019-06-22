@@ -3,14 +3,16 @@ import {CourseDetails} from './courseDetails';
 @Component({
     selector: 'app-courses',
     template:`
+    <div class="container">
     <h3>{{userName}}</h3>
     <ul>
     <li *ngFor="let course of courses">
     {{course}}
     </li>
     </ul>
+    </div>
     `,
-    styles:[``]
+    styleUrls:['./course.component.css']
 })
 
 export class CourseComponent {
