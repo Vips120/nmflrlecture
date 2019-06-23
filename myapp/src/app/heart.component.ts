@@ -8,6 +8,8 @@ import {Component, Input} from '@angular/core';
       (click)="heartLike()"
      >
     </span> {{totalCount}}
+    <hr/>
+
     `,
     styles: [`
     .glyphicon{
