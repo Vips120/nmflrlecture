@@ -11,6 +11,7 @@ import {ChildComponent} from './child.component';
 import { TaskComponent } from './task.component';
 import { TaskOneComponent } from './taskone.component';
 import { PropertyComponent } from './property.component';
+import {UserDirective} from './user.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { PropertyComponent } from './property.component';
     ChildComponent,
     TaskComponent,
     TaskOneComponent,
-    PropertyComponent
+    PropertyComponent,
+    UserDirective
   ],
   imports: [
     BrowserModule
