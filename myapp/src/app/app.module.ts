@@ -12,6 +12,10 @@ import { TaskComponent } from './task.component';
 import { TaskOneComponent } from './taskone.component';
 import { PropertyComponent } from './property.component';
 import {UserDirective} from './user.directive';
+import { CustComponent } from './cust.component';
+import { ContentPipe } from './content.pipes';
+import { TemplateComponent } from './templateForm/template.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +27,14 @@ import {UserDirective} from './user.directive';
     TaskComponent,
     TaskOneComponent,
     PropertyComponent,
-    UserDirective
+    UserDirective,
+    CustComponent,
+    ContentPipe,
+    TemplateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [CourseDetails],
   bootstrap: [AppComponent]

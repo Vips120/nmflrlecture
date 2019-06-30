@@ -1,0 +1,78 @@
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <form #F="ngForm" (ngSubmit)="Save(F.value)">
+
+<div class="form-group">
+    <label for="input" class="col-sm-2 control-label">username</label>
+    <div class="col-sm-10">
+        <input type="text"
+        name="username"
+         placeholder="username"
+         [(ngModel)]="Model.username"
+         #username="ngModel"
+         required
+         minlength="10"
+        class="form-control">
+        <div *ngIf="username.errors && username.touched">
+            {{username.errors | json}}
+<div class="alert alert-danger"
+ *ngIf="username.errors.required"
+>username is required*</div>
+<div class="alert alert-danger"
+ *ngIf="username.errors.minlength"
+>username must be a {{username.errors.minlength.requiredLength}} characters*</div>
+        </div>
+        {{Model.username}}
+    </div>
+</div>
+<div class="form-group">
+    <label for="input" class="col-sm-2 control-label">password</label>
+    <div class="col-sm-10">
+        <input type="password"
+        name="password"
+        [(ngModel)]="Model.password"
+         placeholder="password"
+         required
+         #password="ngModel"
+        class="form-control">
+        <div *ngIf="password.errors && password.touched">
+            <div class="alert alert-danger"
+            *ngIf="password.errors.required">
+           password is required*
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="input" class="col-sm-2 control-label">email</label>
+    <div class="col-sm-10">
+        <input type="email"
+        name="email"
+        [(ngModel)]="Model.email"
+         placeholder="email"
+         required
+         #email="ngModel"
+        class="form-control">
+        <div *ngIf="email.errors && email.touched">
+                <div class="alert alert-danger"
+                *ngIf="email.errors.required">
+               email is required*
+            </div>
+            </div>
+    </div>
+</div>
+<button type="submit" 
+[disabled]="F.invalid"
+class="btn btn-danger btn-mdn">Submit</button>
+
+
+
+            </form>
+        </div>
+    </div>
+    
+</div>
