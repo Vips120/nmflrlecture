@@ -14,9 +14,23 @@
          [(ngModel)]="Model.username"
          #username="ngModel"
          required
-         minlength="10"
+         minlength="8"
         class="form-control">
         {{Model.username}}
+        <div *ngIf="username.errors && username.touched">
+            {{username.errors | json}}
+          <div class="alert alert-danger"
+          *ngIf="username.errors.required"
+          >
+username is required*
+          </div>
+          <div class="alert alert-danger"
+          *ngIf="username.errors.minlength"
+          >
+username must be a {{username.errors.minlength.requiredLength}} characters*
+          </div>
+        </div>
+
     </div>
 </div>
 <div class="form-group">
@@ -57,6 +71,7 @@
     </div>
 </div>
 <button type="submit" 
+[disabled]="!F.valid"
 class="btn btn-danger btn-mdn">Submit</button>
 
 

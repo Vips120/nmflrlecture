@@ -15,7 +15,8 @@ import {UserDirective} from './user.directive';
 import { CustComponent } from './cust.component';
 import { ContentPipe } from './content.pipes';
 import { TemplateComponent } from './templateForm/template.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CourseDetailsComponent } from './reactiveForm/courseDetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +31,13 @@ import {FormsModule} from '@angular/forms';
     UserDirective,
     CustComponent,
     ContentPipe,
-    TemplateComponent
+    TemplateComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [CourseDetails],
   bootstrap: [AppComponent]

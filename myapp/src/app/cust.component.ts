@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
      <li>{{users.name | uppercase | lowercase}}</li>
      <li>{{users.rating | number:'2.2-2'}}</li>
      <li>{{users.ranking | number}}</li>
-     <li>{{users.sal | currency: 'EUR'}}</li>
+     <li>{{users.sal | currency: 'INR'}}</li>
      <li>{{users.date | date: 'MM/dd/yyyy'}}</li>
      <li>{{users | json}}</li>
     </ul>
