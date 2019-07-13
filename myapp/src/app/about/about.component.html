@@ -1,0 +1,25 @@
+<p>
+  about works!
+</p>
+
+
+<div class="container">
+  
+  <div class="row">
+    
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <a routerLink="about1">About1</a>
+      <ul *ngFor="let item of items">
+<li>
+  <a routerLink="about2/{{item.id}}">{{item.name}}</a>
+</li>
+      </ul>
+<!-- <a routerLink="about2/{{1}}">About2</a>
+<a routerLink="about2/{{2}}">About3</a>
+<a routerLink="about2/{{3}}">About4</a> -->
+<div class="well">
+<router-outlet></router-outlet>
+    
+  </div>
+  
+</div>

@@ -37,14 +37,25 @@
                 username must be a 5 characters*
             </div>
             </div>
-            <div class="form-group">
+            <div class="form-group"
+             formGroupName="UserLogin"
+            >
                     <input type="password"
                     placeholder="enter password"
                     class="form-control"
                     formControlName="password"
                     >
+                    <div class="alert alert-danger"
+                    *ngIf="userForm.get('UserLogin').get('password').hasError('required')
+                     && submitted
+                    "
+                    >
+  password is required*
+                    </div>
             </div>
-            <div class="form-group">
+            <div class="form-group"
+             formGroupName="UserLogin"
+            >
                     <input type="email"
                     placeholder="enter email"
                     class="form-control"

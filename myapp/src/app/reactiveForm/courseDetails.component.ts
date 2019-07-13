@@ -14,8 +14,11 @@ export class CourseDetailsComponent implements OnInit {
     ngOnInit(){
       this.userForm =  this.fb.group({
            'username': ['',[Validators.required,Validators.minLength(5), CourseRegularExpression.Username]],
-           'password': ['', Validators.required],
-           'email': ['', Validators.required]
+           UserLogin: this.fb.group({
+            'password': ['', Validators.required],
+            'email': ['', Validators.required]
+           })
+
       });
     }
     Save(data: IcourseUser){
