@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserpostsServices} from '../shared/services/userposts.services';
+import { Iposts } from '../shared/model/posts';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  posts:Iposts;
+  constructor(private userpostsServices: UserpostsServices){}
 items = [{
   id:1,
   name: 'about2'
@@ -19,9 +23,14 @@ items = [{
   name: 'about4'
 }
 ];
-  constructor() { }
 
   ngOnInit() {
+    this.userpostsServices
+    .Postsdetails().
+    subscribe(data => {
+      this.posts = data;
+      console.log(data);
+    })
   }
 
 }
