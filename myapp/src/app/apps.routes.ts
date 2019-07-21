@@ -25,5 +25,9 @@ export const approutes: Routes = [
           component: About2Component
       }
     ]
+ },
+ {
+path:'service',
+loadChildren:'../app/service/service.module#ServiceModule'
  }
 ]
