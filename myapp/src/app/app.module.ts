@@ -25,6 +25,7 @@ import {approutes} from './apps.routes';
 import { About1Component } from './about1/about1.component';
 import { About2Component } from './about2/about2.component';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     AboutComponent,
     About1Component,
-    About2Component
+    About2Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
